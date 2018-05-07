@@ -4,11 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="scripts.js">
     </head>
-
     <body>
-        <form method="post">
+        <form method="post" id="urlap">
             <label>Név:</label>
             <input type="text" name="name" id="name">
             <label>Email:</label> 
@@ -16,18 +14,27 @@
             <label>Telefonszám:</label> 
             <input type="text" name="telefon" id="telefon">
             <label>Születés dátuma:</label> 
-            <input type="text" name="szuletesiDatum" id="szuletesiDatum">
+            <input type="date" name="szuletesiDatum" id="szuletesiDatum">
             <label>Van-e jogosítvány?:</label>
-            igen <input type="radio" name="jogsi" value="1">
-            nem <input type="radio" name="jogsi" value="0">
+            igen <input type="radio" id="jogositvany" name="jogositvany" value="1">
+            nem <input type="radio" id="jogositvany" name="jogositvany" value="0">
             <label>Kedvenc hobbi</label>
-            kerékpár<input name="hobbiKerekpar" id="hobbiKerekpar" type="checkbox"><br>
-            túrázás<input name="hobbiTurazas" id="hobbiTurazas" type="checkbox"><br>
-            hegymászás<input name="hobbiHegymaszas" id="hobbiHegymaszas" type="checkbox"><br>
-            programozás<input name="hobbiProgramozas" id="hobbiProgramozas" type="checkbox"><br>
-            egyéb<input name="hobbiEgyeb" id="hobbiEgyeb" type="checkbox"><br>
-            <button id="save" onclick="save()">Rögzít</button>
+            kerékpár<input name="hobbiKerekpar" id="hobbiKerekpar" type="checkbox" value="on"><br>
+            túrázás<input name="hobbiTurazas" id="hobbiTurazas" type="checkbox" value="on"><br>
+            hegymászás<input name="hobbiHegymaszas" id="hobbiHegymaszas" type="checkbox" value="on"><br>
+            programozás<input name="hobbiProgramozas" id="hobbiProgramozas" type="checkbox" value="on"><br>
+            egyéb<input name="hobbiEgyeb" id="hobbiEgyeb" type="checkbox" value="on"><br>
+            <button id="save" type="submit">Rögzít</button>
+            <button id="reset" type="reset">Reset</button>
+            <input type="hidden" name="modosit" id="modosit" value="0">
         </form>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <button id="list" onclick="list();">Rögzített adatok listázása</button>
+
+        <br><br>
+
+        <div id="lista"></div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
     </body>
 </html>

@@ -1,3 +1,8 @@
 label{
     display: block;
 }
+
+span{
+    color: blue;
+    cursor: pointer;
+}
