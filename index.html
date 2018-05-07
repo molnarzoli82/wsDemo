@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="scripts.js">
+    </head>
+
+    <body>
+        <form method="post">
+            <label>Név:</label>
+            <input type="text" name="name" id="name">
+            <label>Email:</label> 
+            <input type="email" name="email" id="email">
+            <label>Telefonszám:</label> 
+            <input type="text" name="telefon" id="telefon">
+            <label>Születés dátuma:</label> 
+            <input type="text" name="szuletesiDatum" id="szuletesiDatum">
+            <label>Van-e jogosítvány?:</label>
+            igen <input type="radio" name="jogsi" value="1">
+            nem <input type="radio" name="jogsi" value="0">
+            <label>Kedvenc hobbi</label>
+            kerékpár<input name="hobbiKerekpar" id="hobbiKerekpar" type="checkbox"><br>
+            túrázás<input name="hobbiTurazas" id="hobbiTurazas" type="checkbox"><br>
+            hegymászás<input name="hobbiHegymaszas" id="hobbiHegymaszas" type="checkbox"><br>
+            programozás<input name="hobbiProgramozas" id="hobbiProgramozas" type="checkbox"><br>
+            egyéb<input name="hobbiEgyeb" id="hobbiEgyeb" type="checkbox"><br>
+            <button id="save" onclick="save()">Rögzít</button>
+        </form>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    </body>
+</html>
