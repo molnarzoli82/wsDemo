@@ -10,11 +10,17 @@ $(document).ready(function () {
         }).done(function (html) {
             alert('Az űrlap adatai rögzítve');
             
-            //document.getElementById("urlap").reset();
+            $(':input','#urlap')
+            .not(':button, :submit, :reset, :hidden')
+            .val('')
+            .removeAttr('checked')
+            .removeAttr('selected');
+            
         });
         return false;
         
     });
+    
     document.getElementById("reset").addEventListener("click", function () {
         $("#save").html('Rögzít');
     }, true);
